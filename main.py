@@ -10,7 +10,7 @@ if __name__ == "__main__":
         train_path, test_path = ingestion_obj.initiate_data_ingestion()
 
         transformation_obj = DataTransformation()
-        train_arr, test_arr,_= transformation_obj.initiate_data_transformation(train_path, test_path)
+        train_arr, test_arr,preprocessor_obj_file_path= transformation_obj.initiate_data_transformation(train_path, test_path)
 
         model_trainer=ModelTrainer()
         model_trainer.initiate_model_trainer(train_arr,test_arr)

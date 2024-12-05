@@ -24,7 +24,7 @@ class DataIngestion:
             df = pd.read_csv(data_file_path)
             logging.info("reading the csv data")
 
-            df=df.drop(df.columns[0],axis=1)
+            df=df.drop(df.columns[[0,1]],axis=1)
             logging.info("drop the first column") 
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
