@@ -46,7 +46,10 @@ Once the model is trained, you can start the Flask web app by running:
 python app.py
 ```
 Visit http://127.0.0.1:5000 in your browser to interact with the web app.
-
+## 🔗 Check out the deployed web app:
+```
+https://carprice-1nw9.onrender.com
+```
 ## Final Report
 - **R² Score**: 0.94
 - **Mean Cross-Validation Score**: 0.93
@@ -57,7 +60,6 @@ Visit http://127.0.0.1:5000 in your browser to interact with the web app.
 ## Web App and POSTMAN
 ![Image Alt](https://github.com/kartiksb911/auto-price-predictor/blob/81168e6485951fa139645be4927fd9d13424f04a/static/Screenshot%20(111).png)
 ![Image Alt](https://github.com/kartiksb911/auto-price-predictor/blob/81168e6485951fa139645be4927fd9d13424f04a/static/Screenshot%20(112).png)
-
 ## EDA
 ![Image Alt](https://github.com/kartiksb911/auto-price-predictor/blob/81168e6485951fa139645be4927fd9d13424f04a/static/Univariate_Categorcal%20(2).png)
 ![Image Alt](https://github.com/kartiksb911/auto-price-predictor/blob/81168e6485951fa139645be4927fd9d13424f04a/static/Univariate_Num%20(2).png)
@@ -65,6 +67,4 @@ Visit http://127.0.0.1:5000 in your browser to interact with the web app.
 ## 🔗 Links
 [![Github](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/kartiksb911)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kartik-bhardwaj-07b7282b7/)
-
-
  #                                  Thank You
