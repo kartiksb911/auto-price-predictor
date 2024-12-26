@@ -8,17 +8,6 @@ class PredictPipeline:
     def __init__(self):
         pass
     
-    def detect_outliers(self, df, col):
-        percentile25 = df[col].quantile(0.25)
-        percentile75 = df[col].quantile(0.75)
-        iqr = percentile75 - percentile25
-        upper_limit = percentile75 + 1.5 * iqr
-        lower_limit = percentile25 - 1.5 * iqr
-        df[col] = df[col].astype('float64')
-        df.loc[(df[col] > upper_limit), col] = upper_limit
-        df.loc[(df[col] < lower_limit), col] = lower_limit
-        return df
-    
     def predict(self, features):
         try:
             model_path = os.path.join("artifacts", "model.pkl")
@@ -26,10 +15,6 @@ class PredictPipeline:
             
             model = load_object(file_path=model_path)
             preprocessor = load_object(file_path=preprocessor_path)
-            
-            skewed_columns = ['km_driven', 'engine', 'max_power', 'seats']  
-            for col in skewed_columns:
-                features = self.detect_outliers(features, col)
             
             data_scaled = preprocessor.transform(features)
             predictions = model.predict(data_scaled)
